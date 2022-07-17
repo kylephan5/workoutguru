@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chest.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chest: Workout Guru</title>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+        <a
+          href="/"
+          class="navbar-brand mb-0 h1"
+          style="margin-left: 15px"
+          >Workout Guru</a
+        >
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="padding-left: 15px;"> About </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" style="padding-left: 15px;"> Gur-ate </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="padding-left: 15px;"
+              >
+                Muscle Groups
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="/chest/" class="dropdown-item">Chest</a></li>
+                <li>
+                  <a href="/shoulders/" class="dropdown-item">Shoulders</a>
+                </li>
+                <li>
+                  <a href="/triceps/" class="dropdown-item">Triceps</a>
+                </li>
+                <li><a href="/back/" class="dropdown-item">Back</a></li>
+                <li><a href="/biceps/" class="dropdown-item">Biceps</a></li>
+                <li><a href="/legs/" class="dropdown-item">Legs</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="top-intro" style="background-image: url({% static '/pics/banners/bannerimagechest.jpeg' %})">
+      <h1>CHEST</h1>
+    </div>
+    <div class="chest" id="headers">
+      <h2>Barbell Chest Exercises</h2>
+      <div class="container-1">
+        <a href="javascript: return false" class="bb-bench-press-modal">
+          <div class="bb-bench-press bg-light" id="squares">
+            <h3>Barbell Bench Press</h3>
+            <img src="{% static 'pics/chest gifs/benchpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Mid-Chest<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Triceps, Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="inc-bench-press-modal">
+          <div class="incline-bench-press bg-light" id="squares">
+            <h3>Incline Bench Press</h3>
+            <img src="{% static 'pics/chest gifs/inclinebenchpressgif.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Upper
+              Chest<br /><span class="secondary-target">Secondary Target:</span
+              ><br />
+              Front Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="landmine-chest-press-modal">
+          <div class="landmine-chest-press bg-light" id="squares">
+            <h3>Landmine Chest Press</h3>
+            <img src="{% static '/pics/chest gifs/landminechestpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Upper
+              Chest<br /><span class="secondary-target">Secondary Target:</span
+              ><br />
+              Front Deltoids
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="decline-chest-press-modal">
+          <div class="decline-bench-press bg-light" id="squares">
+            <h3>Decline Bench Press</h3>
+            <img src="{% static '/pics/chest gifs/declinebenchpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Lower
+              Chest<br /><span class="secondary-target">Secondary Target:</span
+              ><br />Triceps, Front Deltoids <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="chest" id="headers">
+      <h2>Dumbbell Chest Exercises</h2>
+      <div class="container-1">
+        <a href="javascript: return false" class="db-press-modal">
+          <div class="db-press bg-light" id="squares">
+            <h3>Dumbbell Bench Press</h3>
+            <img src="{% static '/pics/chest gifs/dbchestpressgif.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Mid-Chest<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Triceps, Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="cg-bench-press-modal">
+          <div class="cg-bench-press bg-light" id="squares">
+            <h3>Close Grip Bench Press</h3>
+            <img src="{% static '/pics/chest gifs/closegripchestpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Inner
+              Chest (depending on angle)<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Triceps
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="underhand-pec-fly-modal">
+          <div class="uh-pec-fly bg-light" id="squares">
+            <h3>Underhand Pectoral Fly</h3>
+            <img src="{% static '/pics/chest gifs/underhandpecfly.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Mid-Chest<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Deltoids
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="pec-fly-modal">
+          <div class="pec-fly bg-light" id="squares">
+            <h3>Flat/Incline Pectoral Fly</h3>
+            <img src="{% static '/pics/chest gifs/pecflygif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Mid-Chest<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="inc-db-press-modal">
+          <div class="inc-db-press bg-light" id="squares">
+            <h3>Incline Dumbbell Bench Press</h3>
+            <img src="{% static '/pics/chest gifs/incdbpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Upper
+              Chest<br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Front Deltoids, Triceps
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="db-pullover-modal">
+          <div class="db-pullover bg-light" id="squares">
+            <h3>Dumbbell Pullover</h3>
+            <img src="{% static '/pics/chest gifs/dbpullovergif.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />
+              Chest, Lats<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Deltoids, Triceps
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="chest" id="headers">
+      <h2>Cable Chest Exercises</h2>
+      <div class="container-1">
+        <a href="javascript: return false" class="ltoh-cablefly-modal">
+          <div class="ltoh-cablefly bg-light" id="squares">
+            <h3>Low to High Cable Fly</h3>
+            <img src="{% static '/pics/chest gifs/ltohcablefly.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Upper
+              Chest<br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="htol-cablefly-modal">
+          <div class="htol-cablefly bg-light" id="squares">
+            <h3>High to Low Cable Fly</h3>
+            <img src="{% static '/pics/chest gifs/htolcablefly.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Lower
+              Chest<br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="ml-cablefly-modal">
+          <div class="mlcablefly bg-light" id="squares">
+            <h3>Mid-Level Cable Fly</h3>
+            <img src="{% static '/pics/chest gifs/mlcableflygif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Mid-Chest<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <a href="javascript: return false" class="sa-rot-chest-press-modal">
+          <div class="sa-rot-chest-press bg-light" id="squares">
+            <h3>Single Arm Rotational Chest Press</h3>
+            <img src="{% static '/pics/chest gifs/singlearmchestpress.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Mid-Chest<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Deltoids
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- BARBELL MODALS -->
+    <div class="bbbp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Barbell Bench Press</h2>
+      <iframe
+        src="https://www.youtube.com/embed/gRVjAtPip0Y"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The barbell bench press is a classic exercise that targets the entirety
+        of the chest, with an emphasis on the middle of the chest. It is the
+        quintessential "push" compound exercise, as it engages multiple muscle
+        groups including the triceps and front deltoids.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        Typically, you want to start your workout with the bench press, as it is
+        a pretty taxing exercise. If you are looking to put on more mass, opt
+        for <span id="tags">heavier</span> weight with
+        <span id="tags">less</span> reps
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td>Muscle Growth</td>
+          <td>6-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="ibbbp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Incline Bench Press</h2>
+      <iframe
+        width="560"
+        height="350"
+        src="https://www.youtube.com/embed/DbFgADa2PL8?start=38"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The incline bench press is a compound exercise that targets the upper
+        chest. It is a variation of the classic flat bench press. In addition,
+        it secondarily targets similar muscles as the barbell bench press, but
+        this time with more emphasis on the front deltoids (shoulders).
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        Typically, you want to start your workout with the bench press, as it is
+        a pretty taxing exercise. If you are looking to put on more mass, opt
+        for <span id="tags">heavier</span> weight with
+        <span id="tags">less</span> reps
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td>Muscle Growth</td>
+          <td>6-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="lcp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Landmine Chest Press</h2>
+      <iframe
+        width="560"
+        height="350"
+        src="https://www.youtube.com/embed/1G-_FTEkoNw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The landmine chest press is a more niche exercise, and targets the upper
+        chest. It simultaneously works the middle chest and deltoid muscles. Be
+        sure to embrace your core to help with stabilizing your body.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        With this exercise, you will definitely want to increase the volume and
+        decrease the weight. Control the weight with each rep, and focus on
+        <a
+          href="https://www.healthline.com/health/exercise-fitness/time-under-tension#:~:text=Time%20under%20tension%20(TUT)%20refers,strength%2C%20endurance%2C%20and%20growth."
+          target="_blank"
+          ><span id="tags">TIME UNDER TENSION</span></a
+        >. But, remember, that if you are looking to put on more mass, opt for
+        <span id="tags">heavier</span> weight with
+        <span id="tags">less</span> reps
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">6-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="dcp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Decline Chest Press</h2>
+      <iframe
+        width="560"
+        height="350"
+        src="https://www.youtube.com/embed/LfyQBUKR8SE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The decline barbell bench press is an exercise that targets the lower
+        chest. It is a great compound exercise that engages the shoulders as
+        well as the triceps in the movement. Similar to the incline bench press,
+        it is a derivative of the flat bench press.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        The decline bench press is an exercise that one can use for hypertrophy
+        (high volume) or for strength/compound lifting. If you are looking to
+        put on more mass, opt for <span id="tags">heavier</span> weight with
+        <span id="tags">less</span> reps
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td>Muscle Growth</td>
+          <td>6-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <!-- DUMBBELL MODALS -->
+    <div class="dbp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Dumbbell Chest Press</h2>
+      <iframe
+        width="560"
+        height="350"
+        src="https://www.youtube.com/embed/Y_7aHqXeCfQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The dumbbell chest press is a classic exercise that targets the entirety
+        of the chest, with an emphasis on the middle of the chest. Similar to
+        the barbell chest press, this exercise utilizes a pushing motion to
+        build the chest muscles. The key for this exercise is to make sure that
+        your elbows are not flared out when doing the motion, as it could cause
+        shoulder pain.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-12 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="cgbp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Close Grip Bench Press</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/cefsgoFQNNA"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The close grip dumbbell bench press is an exercise that emphasis the
+        inner chest, and triceps. You can perform this exercise on a decline,
+        flat, or incline bench. It is a great workout to practice
+        <a
+          href="https://www.youareunltd.com/2018/10/05/understanding-the-mind-muscle-connection-and-making-it-work-for-you/"
+          target="_blank"
+          ><span id="tags">mind muscle connection</span></a
+        >.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-12 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="uhpf-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Underhand Pectoral Fly</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/zgq0jPU5YAQ?start=14"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The underhand pectoral fly is a great warmup and also a great exercise
+        to target the mid-chest. This exercise would be great to pair with the
+        incline bench press (or any other compound movement).
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do <span id="tags">10-15</span> solid repetitions.
+        Your last few reps should be taxing. Use relatively light weight, avoid
+        using momentum to raise the dumbbells.
+      </p>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="pf-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Flat/Incline Pectoral Fly</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/eozdVDA78K0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The pectoral fly on a bench is a great exercise that mimics the flies
+        performed with cables. Be sure to use relatively light weight to reduce
+        the risk of shoulder injury. Keep a slight bend in your elbows while
+        performing the movement. This exercise can be performed on a
+        flat/incline bench; they will recruit different muscles depending on the
+        angle of the bench.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-12 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="idbp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Incline Dumbbell Bench Press</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/0G2_XV7slIg"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The incline dumbbell bench press is a similar movement to the incline
+        barbell bench press. It targets similar muscles, but places less
+        emphasis on the "compound" nature of the barbell and singles out each
+        arm. Push yourself with this workout, and be sure to not flare your
+        elbows out!
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-12 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="dbpull-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Dumbbell Pullover</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/moKuOuFNBDM?start=17"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The dumbbell pullover is an excellent exercise that targets the chest
+        and the lats simultaneously. It is a unique movement that is not seen in
+        many other exercises. It's a great exercise to incorporate in an Arnold
+        Split (one that pairs chest/black together on the same day). Perform
+        this exercise with relatively lighter weight to minimize the risk of
+        shoulder injury.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-12 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-12</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <!-- CABLE MODALS -->
+    <div class="ltohcf-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Low to High Cable Fly</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/KFl3Re5UbPo"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The low to high cable fly is a great upper chest workout where you can
+        focus on
+        <a
+          href="https://www.healthline.com/health/exercise-fitness/time-under-tension#:~:text=Time%20under%20tension%20(TUT)%20refers,strength%2C%20endurance%2C%20and%20growth."
+          target="_blank"
+          ><span id="tags">TIME UNDER TENSION</span></a
+        >. Go moderate weight on this exercise, and be sure to control the
+        weight and squeeze your pecs as you reach the peak of the movement.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-15 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-15</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="htolcf-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>High to Low Cable Fly</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/H36vL531tZA"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The high to low cable fly is a great lower chest workout where you can
+        focus on
+        <a
+          href="https://www.healthline.com/health/exercise-fitness/time-under-tension#:~:text=Time%20under%20tension%20(TUT)%20refers,strength%2C%20endurance%2C%20and%20growth."
+          target="_blank"
+          ><span id="tags">TIME UNDER TENSION</span></a
+        >. Go moderate weight on this exercise, and be sure to control the
+        weight and squeeze your pecs as you reach the peak of the movement.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-15 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-15</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="mlcf-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Mid-Level Cable Fly</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/7Sb0HtOfCaI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The mid-level cable fly is a great chest workout where you can focus on
+        <a
+          href="https://www.healthline.com/health/exercise-fitness/time-under-tension#:~:text=Time%20under%20tension%20(TUT)%20refers,strength%2C%20endurance%2C%20and%20growth."
+          target="_blank"
+          ><span id="tags">TIME UNDER TENSION</span></a
+        >. Go moderate weight on this exercise, and be sure to control the
+        weight and squeeze your pecs as you reach the peak of the movement.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-15 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-15</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <div class="sarcp-modal hidden" id="modal">
+      <button class="close-modal">&times;</button>
+      <h2>Single Arm Rotational Chest Press</h2>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/AK-mO8p4F0k"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <p>
+        The single arm rotational cable chest press is a great exercise where
+        you can focus on
+        <a
+          href="https://www.healthline.com/health/exercise-fitness/time-under-tension#:~:text=Time%20under%20tension%20(TUT)%20refers,strength%2C%20endurance%2C%20and%20growth."
+          target="_blank"
+          ><span id="tags">TIME UNDER TENSION</span></a
+        >. Go moderate weight on this exercise, and be sure to control the
+        weight and squeeze your pecs as you reach the peak of the movement.
+      </p>
+      <p><b>- - -</b></p>
+      <p>
+        For this exercise, we recommend that you aim for hypertrophy. Your goal
+        should be able to do 8-15 solid repetitions. Your last few reps should
+        be taxing.
+      </p>
+      <table>
+        <th>Intended Goal</th>
+        <th>Amount of Reps</th>
+        <tr>
+          <td class="bg-success">Muscle Growth</td>
+          <td class="bg-success">8-15</td>
+        </tr>
+        <td>Strength Training</td>
+        <td>3-5</td>
+      </table>
+      <p><b>- - -</b></p>
+    </div>
+    <!-- creating the modals that pop up!-->
+    <div class="overlay hidden"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <p style="padding-left: 30px">👍 = corresponds to popularity of exercise</p>
+    <footer class="bg-success text-center">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Hello! I am constantly updating this web-app, and will continue to
+            make it better in the future. We hope the information on here serves
+            you well for now! 😊
+          </p>
+        </section>
+        <!-- Section: Text -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://workoutguru.com/">workoutguru.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="{% static 'chest.js' %}"></script>
+  </body>
+</html>

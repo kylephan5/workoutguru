@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'biceps.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Biceps: Workout Guru</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+      <a
+        href="/"
+        class="navbar-brand mb-0 h1"
+        style="margin-left: 15px"
+        >Workout Guru</a
+      >
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="padding-left: 15px;"> About </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="padding-left: 15px;"> Gur-ate </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="padding-left: 15px;"
+            >
+              Muscle Groups
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a href="/chest/" class="dropdown-item">Chest</a></li>
+              <li>
+                <a href="/shoulders/" class="dropdown-item">Shoulders</a>
+              </li>
+              <li><a href="/triceps/" class="dropdown-item">Triceps</a></li>
+              <li><a href="/back/" class="dropdown-item">Back</a></li>
+              <li><a href="/biceps/" class="dropdown-item">Biceps</a></li>
+              <li><a href="/legs/" class="dropdown-item">Legs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="top-intro" style="background-image: url({% static '/pics/banners/bannerimagechest.jpeg' %})">
+      <h1>BICEPS</h1>
+    </div>
+    <div class="biceps" id="barbell">
+      <h2>Barbell/EZ-Bar Biceps Exercises</h2>
+    </div>
+    <div class="biceps">
+      <div class="container-1">
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#EZBCGC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>EZ-Bar Close Grip Curl</h3>
+            <img src="{% static 'pics/bicep gifs/cgezcurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Long Head
+              <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Short Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- CLOSE GRIP EZCURL BAR -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#EZBWGC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>EZ-Bar Wide Grip Curl</h3>
+            <img src="{% static 'pics/bicep gifs/wgezcurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Short
+              Head <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Long Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- WIDE GRIP EZCURL BAR -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#EZBPC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>EZ-Bar Preacher Curl</h3>
+            <img src="{% static 'pics/bicep gifs/ebarpreachercurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Short
+              Head <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Long Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- EZ BAR PREACHER CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#EZBRC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>EZ-Bar Reverse Curl</h3>
+            <img src="{% static 'pics/bicep gifs/ezbarreversecurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span
+              ><br />Brachialis <br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Forearms
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- EZ BAR REVERSE CURL -->
+      </div>
+    </div>
+    <div class="biceps" id="dumbbell">
+      <h2>Dumbbell Biceps Exercises</h2>
+    </div>
+    <div class="biceps">
+      <div class="container-1">
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#BC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Bicep Curl</h3>
+            <img src="{% static 'pics/bicep gifs/normalbicepcurls.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Short
+              Head <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Long Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- NORMAL BICEP CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#IDBC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Incline Dumbbell Curl</h3>
+            <img src="{% static 'pics/bicep gifs/inclinedbcurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Long Head
+              <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Short Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- INCLINE DB CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#CC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Concentration Curl</h3>
+            <img src="{% static 'pics/bicep gifs/concentrationcurl.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Long Head
+              <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Short Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- CONCENTRATION CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#HC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Hammer Curl</h3>
+            <img src="{% static 'pics/bicep gifs/hammercurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Long
+              Head, Brachialis <br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Short Head
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- HAMMER CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#ZC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Zottman Curl</h3>
+            <img src="{% static 'pics/bicep gifs/zottmancurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Long
+              Head, Forearms <br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Short Head
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- ZOTTMAN CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#SC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Spider Curl</h3>
+            <img src="{% static 'pics/bicep gifs/spidercurl.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Short
+              Head <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Forearms, Long Head
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- SPIDER CURL -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#DBPC-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Dumbbell Preacher Curl</h3>
+            <img src="{% static 'pics/bicep gifs/db preacher curl.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Short
+              Head <br /><span class="secondary-target">Secondary Target:</span>
+              <br />
+              Forearms, Long Head
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- DB PREACHER CURL -->
+      </div>
+      <div class="biceps" id="cable">
+        <h2>Cable Biceps Exercises</h2>
+      </div>
+      <div class="biceps">
+        <div class="container-1">
+          <a
+            href="javascript: return false"
+            data-bs-toggle="modal"
+            data-bs-target="#LCRC-modal"
+          >
+            <div class="boxes bg-light">
+              <h3>Lying Cable Rope Curl</h3>
+              <img src="{% static 'pics/bicep gifs/lyingcableropecurl.gif' %}" alt="lol" />
+              <p>
+                <span class="primary-target">Primary Target:</span><br />Long
+                Head <br /><span class="secondary-target"
+                  >Secondary Target:</span
+                >
+                <br />
+                Brachialis, Short Head
+                <br /><br />
+                👍👍
+              </p>
+            </div>
+          </a>
+          <!-- LYING CABLE ROPE CURL -->
+          <a
+            href="javascript: return false"
+            data-bs-toggle="modal"
+            data-bs-target="#OCC-modal"
+          >
+            <div class="boxes bg-light">
+              <h3>Overhead Cable Curl</h3>
+              <img src="{% static 'pics/bicep gifs/overheadcablecurl.gif' %}" alt="lol" />
+              <p>
+                <span class="primary-target">Primary Target:</span><br />Short
+                Head <br /><span class="secondary-target"
+                  >Secondary Target:</span
+                >
+                <br />
+                Brachialis
+                <br /><br />
+                👍👍
+              </p>
+            </div>
+          </a>
+          <!-- OVERHEAD CABLE CURL -->
+          <a
+            href="javascript: return false"
+            data-bs-toggle="modal"
+            data-bs-target="#FACC-modal"
+          >
+            <div class="boxes bg-light">
+              <h3>Facing Away Cable Curl</h3>
+              <img src="{% static 'pics/bicep gifs/facing away cable curl.gif' %}" alt="lol" />
+              <p>
+                <span class="primary-target">Primary Target:</span><br />Long
+                Head <br /><span class="secondary-target"
+                  >Secondary Target:</span
+                >
+                <br />
+                Forearms
+                <br /><br />
+                👍👍👍
+              </p>
+            </div>
+          </a>
+          <!-- FACING AWAY CABLE CURL -->
+          <a
+            href="javascript: return false"
+            data-bs-toggle="modal"
+            data-bs-target="#CBC-modal"
+          >
+            <div class="boxes bg-light">
+              <h3>Cable Bicep Curl with Straight Bar</h3>
+              <img src="{% static 'pics/bicep gifs/cablebicepcur.webp' %}" alt="lol" />
+              <p>
+                <span class="primary-target">Primary Target:</span><br />Long
+                Head <br /><span class="secondary-target"
+                  >Secondary Target:</span
+                >
+                <br />
+                Forearms
+                <br /><br />
+                👍👍👍
+              </p>
+            </div>
+          </a>
+          <!-- CABLE CURL W STRAIGHT BAR -->
+          <a
+            href="javascript: return false"
+            data-bs-toggle="modal"
+            data-bs-target="#CRC-modal"
+          >
+            <div class="boxes bg-light">
+              <h3>Cable Rope Curl</h3>
+              <img src="{% static 'pics/bicep gifs/cable rope curls.gif' %}" alt="lol" />
+              <p>
+                <span class="primary-target">Primary Target:</span><br />Long
+                Head <br /><span class="secondary-target"
+                  >Secondary Target:</span
+                >
+                <br />
+                Forearms
+                <br /><br />
+                👍👍👍
+              </p>
+            </div>
+          </a>
+          <!-- CABLE ROPE CURL -->
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <div class="modal" id="EZBCGC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>EZ-Bar Close Grip Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/o74HeVd6BIw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="EZBWGC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>EZ-Bar Wide Grip Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/o74HeVd6BIw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="EZBPC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>EZ-Bar Preacher Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ucq-w1JR5gU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="EZBRC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>EZ-Bar Reverse Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/nRgxYX2Ve9w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="BC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Bicep Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/in7PaeYlhrM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="IDBC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Incline Dumbbell Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/HhHHBj3qTJ4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="CC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Concentration Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/0AUGkch3tzc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="HC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Hammer Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/zC3nLlEvin4"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="ZC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Zottman Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ZrpRBgswtHs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="SC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Spider Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/nvufDW-MSQk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="DBPC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Dumbbell Preacher Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/vngli9UR6Hw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="LCRC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Lying Cable Rope Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/G1ZaD-pAQ38"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="OCC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Overhead Cable Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/5_n3gVeGEqc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="FACC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Facing Away Cable Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/xrQlkUQCKQY"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="CBC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Cable Bicep Curl with Straight Bar</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/NFzTWp2qpiE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="CRC-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Cable Rope Curl</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/NfBrTXT1f7Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <p style="padding-left: 30px">👍 = corresponds to popularity of exercise</p>
+    <footer class="bg-success text-center">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Hello! I am constantly updating this web-app, and will continue to
+            make it better in the future. We hope the information on here serves
+            you well for now! 😊
+          </p>
+        </section>
+        <!-- Section: Text -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://workoutguru.com/">workoutguru.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>

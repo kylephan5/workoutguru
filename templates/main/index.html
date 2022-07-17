@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% load static %}
+    <!-- Bootstrap CSS -->
+    <style type="text/css">
+      .benefits ul li::before {
+      content: "";
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-size: 40px;
+      background-image: url(' {{ STATIC_URL }}pics/intropics/dumbbellpic.png');
+      background-repeat: no-repeat;
+      margin-right: 5px;
+      margin-bottom: -12px;
+}
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Workout Gurus</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+      <a href="#" class="navbar-brand mb-0 h1" style="margin-left: 15px"
+        >Workout Guru</a
+      >
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="padding-left: 15px;"> About </a>
+          </li>
+          <li class="nav-item">
+            <a href="/gurate/" class="nav-link" style="padding-left: 15px;"> Gur-ate </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="padding-left: 15px;"
+            >
+              Muscle Groups
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a href="/chest/" class="dropdown-item">Chest</a></li>
+              <li>
+                <a href="/shoulders/" class="dropdown-item">Shoulders</a>
+              </li>
+              <li><a href="/triceps/" class="dropdown-item">Triceps</a></li>
+              <li><a href="/back/" class="dropdown-item">Back</a></li>
+              <li><a href="/biceps/" class="dropdown-item">Biceps</a></li>
+              <li><a href="/legs/" class="dropdown-item">Legs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="intro">
+      <h1 class="">Workout Guru</h1>
+      <h4 class="fst-italic">
+        Your One Stop Shop for Learning about Weightlifting
+      </h4>
+    </div>
+    <div class="benefits">
+      <div class="left-side">
+        <h3>Why should I weightlift?</h3>
+        <ul>
+          <li>Burns Calories Efficiently</li>
+          <li>Decreases Abdominal Fat</li>
+          <li>Boost Self Esteem</li>
+          <li>Improve Heart Health</li>
+          <li>Helps blood sugar levels</li>
+          <li>Promote greater mobility</li>
+          <li>And so much more!</li>
+        </ul>
+      </div>
+      <figure class="right-side">
+        <a href="https://google.com/search?q=gyms+near+me" target="_blank"
+          ><img src="{% static 'pics/intropics/weightliftinggym.png' %}" alt="picture of gym"
+        /></a>
+        <figcaption>Click on the image to find a gym near you!</figcaption>
+      </figure>
+    </div>
+    <div class="testimonials bg-light">
+      <div class="t1">
+        <h3></h3>
+        <p>
+          <b id="quotations">"</b
+          ><span id="workout-guru">Workout Guru</span> helped me transform my
+          body, and really helped me define my workout plan. It gave me the
+          motivation and help I needed to reach my dream physique.<b
+            id="quotations"
+            >"</b
+          >
+          -<i>Garrett S.</i>
+        </p>
+      </div>
+      <div class="t2">
+        <h3>Testimonials</h3>
+        <p>
+          <b id="quotations">"</b>There is no better place to start your
+          exercise journey than with
+          <span id="workout-guru">Workout Guru</span>. Their information is so
+          neatly presented and convenient.<b id="quotations">"</b> -
+          <i>Rohun P.</i>
+        </p>
+      </div>
+      <div class="t3">
+        <h3></h3>
+        <p>
+          <b id="quotations">"</b>Not enough good things can be said about
+          <span id="workout-guru">Workout Guru</span>. It is the best website
+          for getting information about various lifting exercises on the
+          internet!<b id="quotations">"</b> - <i>Stephanie D.</i>
+        </p>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-success text-center">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Hello! I am constantly updating this web-app, and will continue to
+            make it better in the future. We hope the information on here serves
+            you well for now! 😊
+          </p>
+        </section>
+        <!-- Section: Text -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://workoutguru.com/">workoutguru.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </body>
+</html>

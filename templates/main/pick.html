@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Pick what exercises you want to do today!</h1>
+    <form method="POST" action="/pick/">
+        {% csrf_token %}
+        <div class="exercise">
+            <h2>{{exercise.name}}</h1>
+            <img src="{{ exercise.image.url }}" alt="" style="width: 60%; height: auto; max-height: 300px;">
+            <h4>Time: {{exercise.time}} min.</h4>
+            <button type="submit", name="no", value="no" class="btn btn-danger" style="margin-right: 30px;">X</button>
+            <button type="submit", name="yes", value="yes", class="btn btn-success" style="margin-left: 30px;">&#10003;</button>
+        </div>
+    </form>
+    <div style="margin-top: 25px;">
+        <h2>Time left in workout:</h2>
+        <h3>{{time}} min.</h3>
+    </div>
+</div>
+{% endblock %}

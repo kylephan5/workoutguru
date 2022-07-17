@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Exercise</th>
+        <th scope="col">Image</th>
+        <th scope="col">Sets/Reps</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for exercise in selected %}
+        <tr>
+            <td>{{exercise.name}}</td>
+            <td><img src="{{exercise.image.url}}" alt="" style="max-height: 100px;"></td>
+            <td>{{exercise.reps}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+<h3>Estimated total time for workout:</h3>
+<p>{{total_time}}</p>
+
+{% endblock %}

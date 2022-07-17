@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'shoulders.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shoulders: Workout Guru</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+      <a
+        href="/"
+        class="navbar-brand mb-0 h1"
+        style="margin-left: 15px"
+        >Workout Guru</a
+      >
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="padding-left: 15px;"> About </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" style="padding-left: 15px;"> Gur-ate </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="padding-left: 15px;"
+            >
+              Muscle Groups
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a href="/chest/" class="dropdown-item">Chest</a></li>
+              <li>
+                <a href="/shoulders/" class="dropdown-item">Shoulders</a>
+              </li>
+              <li><a href="/triceps/" class="dropdown-item">Triceps</a></li>
+              <li><a href="/back/" class="dropdown-item">Back</a></li>
+              <li><a href="/biceps/" class="dropdown-item">Biceps</a></li>
+              <li><a href="/legs/" class="dropdown-item">Legs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="top-intro" style="background-image: url({% static '/pics/banners/bannerimagechest.jpeg' %})">
+      <h1>SHOULDERS</h1>
+    </div>
+    <div class="toggle">
+      <a href="#barbell">Barbell Exercises</a><br />
+      <a href="#dumbbell">Dumbbell Exercises</a><br />
+      <a href="#cable">Cable Exercises</a>
+    </div>
+    <div class="shoulders" id="barbell">
+      <h2>Barbell Shoulder Exercises</h2>
+    </div>
+    <div class="shoulders">
+      <div class="container-1">
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#OHSP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Overhead Shoulder Press</h3>
+            <img
+              src="{% static 'pics/shoulder gifs/Overhead-press-exercise.webp' %}"
+              alt="lol"
+            />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoid, Triceps
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- OVERHEAD SHOULDER PRESS -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#HKLP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Half-Kneeling Landmine Press</h3>
+            <img src="{% static 'pics/shoulder gifs/hklpgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoid
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+        <!-- HALFKNEELING LANDMINE PRESS -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#PP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Push Press</h3>
+            <img src="{% static 'pics/shoulder gifs/pushpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoid
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- PUSH PRESS -->
+      </div>
+    </div>
+    <div class="shoulders" id="dumbbell">
+      <h2>Dumbbell Shoulder Exercises</h2>
+    </div>
+    <div class="shoulders">
+      <div class="container-1">
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#arnoldpress-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Arnold Press</h3>
+            <img src="{% static 'pics/shoulder gifs/arnoldpressgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoid, Triceps
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- ARNOLD PRESS -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#SDSP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Seated Dumbbell Shoulder Press</h3>
+            <img src="{% static 'pics/shoulder gifs/sdspgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoid, Triceps
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- SEATED DUMBBELL SHOULDER PRESS-->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#LR-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Lateral Raises</h3>
+            <img src="{% static 'pics/shoulder gifs/latraise.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Lateral
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Front Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- LAT RAISE-->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#LLR-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Leaning Lateral Raises</h3>
+            <img src="{% static 'pics/shoulder gifs/leaninglatraisegif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Lateral
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Front Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- LEANING LAT RAISE-->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#FLR-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Front Raises</h3>
+            <img src="{% static 'pics/shoulder gifs/frontlatraisegif.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- FRONT RAISE -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#SNGDOP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Seated Neutral Grip Dumbbell Overhead Press</h3>
+            <img
+              src="{% static 'pics/shoulder gifs/seatedneutralgripdumbbellpressgif.gif' %}"
+              alt="lol"
+            />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- SNGDOP-->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#RDR-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Rear Delt Row</h3>
+            <img src="{% static 'pics/shoulder gifs/reardeltrowgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Rear
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- REAR DELT ROW-->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#RDF-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Rear Delt Fly</h3>
+            <img src="{% static 'pics/shoulder gifs/reardeltfly.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Rear
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- REAR DELT FLY-->
+      </div>
+    </div>
+    <div class="shoulders" id="cable">
+      <h2>Cable Shoulder Exercises</h2>
+    </div>
+    <div class="shoulders">
+      <div class="container-1">
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#SALR-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Single Arm Lateral Raise</h3>
+            <img src="{% static 'pics/shoulder gifs/cablesalrgif.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Lateral
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Front Deltoids
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- SINGLE ARM LAT RAISE-->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#FP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Face Pulls</h3>
+            <img src="{% static 'pics/shoulder gifs/face-pull.webp' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Rear
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Triceps
+              <br /><br />
+              👍👍👍
+            </p>
+          </div>
+        </a>
+        <!-- FACE PULLS -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#CFR-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Cable Front Raise</h3>
+            <img src="{% static 'pics/shoulder gifs/cablefrontraise.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front
+              Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+        <!-- CABLE FRONT RAISE -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#CSP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Cable Shoulder Press</h3>
+            <img src="{% static 'pics/shoulder gifs/cableshoulderpress.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />Front,
+              Rear Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍
+            </p>
+          </div>
+        </a>
+        <!-- CABLE SHOULDER PRESS -->
+        <a
+          href="javascript: return false"
+          data-bs-toggle="modal"
+          data-bs-target="#LFP-modal"
+        >
+          <div class="boxes bg-light">
+            <h3>Lying Face Pulls</h3>
+            <img src="{% static 'pics/shoulder gifs/lyingfacepulls.gif' %}" alt="lol" />
+            <p>
+              <span class="primary-target">Primary Target:</span><br />
+              Rear Deltoids<br /><span class="secondary-target"
+                >Secondary Target:</span
+              >
+              <br />
+              Lateral Deltoids
+              <br /><br />
+              👍👍
+            </p>
+          </div>
+        </a>
+        <!-- CABLE SHOULDER PRESS -->
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MODALS -->
+    <div class="modal" id="OHSP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Overhead Barbell Shoulder Press</h2>
+          <div>
+            <iframe
+              src="https://www.youtube.com/embed/QAQ64hK4Xxs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="HKLP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Half-Kneeling Landmine Press</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/Rdlfu4nMIZc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="PP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Push Press</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/ep30avTSMB0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The overhead shoulder press with a barbell is the quintessential
+            compound shoulder exercise. It engages the front deltoids primarily,
+            but also hits the lateral deltoids and the triceps. At the peak of
+            the movement, make sure that your ears are right next to your
+            biceps. Minimize momentum by not bouncing/using your legs.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            Typically, you want to start your workout with the bench press, as
+            it is a pretty taxing exercise. If you are looking to put on more
+            mass, opt for <span id="tags">heavier</span> weight with
+            <span id="tags">less</span> reps. However, if you are using this as
+            a supplementary shoulder exercise, aim for higher repetition
+            amounts.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td>Muscle Growth</td>
+              <td>6-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="arnoldpress-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Arnold Press</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/6Z15_WdXmVw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The Arnold press is a popular shoulder exercise done by Arnold
+            Schwarzenegger. It targets the front deltoids from a seated bench
+            position with some wrist supination.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend that you use moderate weight
+            where you are able to do 8-12 repetitions, with the last few
+            repetitions being particularly difficult. Do not sacrifice form for
+            weight, as you could increase risk for injury.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td class="bg-success">Muscle Growth</td>
+              <td class="bg-success">8-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="SDSP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Seated Dumbbell Shoulder Press</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/lfb3ffbrd4Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The seated dumbbell shoulder press is a great exercise that targets
+            the front deltoid primarily. Be sure to keep tension on the front
+            deltoid by not bringing your arms too far down in between reps. In
+            addition, focus on
+            <a
+              href="https://www.youareunltd.com/2018/10/05/understanding-the-mind-muscle-connection-and-making-it-work-for-you/"
+              target="_blank"
+              ><span id="tags">mind muscle connection</span></a
+            >
+            throughout the exercise.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend using a moderately heavy weight
+            where you are able to perform 8-12 repetitions.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td class="bg-success">Muscle Growth</td>
+              <td class="bg-success">8-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="LR-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Lateral Raises</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/b_LEX4n9lOs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The lateral raise is one of the most popular lateral deltoid
+            exercises, for good reason. It is a great exercise to develop the
+            shoulder. With its many variations (you can perform it standing up,
+            or seated), it is a great exercise to isolate the lateral deltoid.
+            Make sure you keep a slight bend in the elbow and do not go above
+            shoulder height to minimize shoulder cuff injury risk.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend using a relatively light weight
+            and aiming to do <span id="tags">12-15</span> repetitions.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="LLR-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Leaning Lateral Raises</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/_cBNUdlXqao"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The leaning lateral raise is a popular variation of the normal
+            lateral raise. By performing it leaning, you increase the range of
+            motion and are able to activate better mind muscle connection.
+            Follow the same rules as the normal lateral raise; keep a slight
+            bend in the elbows and do not go above shoulder height to minimize
+            shoulder cuff injury risk.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend using a relatively light weight
+            and aiming to do <span id="tags">12-15</span> repetitions.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="FLR-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Front Raises</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/-t7fuZ0KhDA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The front raise is very similar to the lateral raise in movement,
+            but targets a different head of the deltoid. It targets the front
+            head of the deltoid, which is usually a secondary target of many
+            chest exercises. It is less popular than the lateral raise, but is
+            still get a good exercise. Much like the lateral raise, keep a
+            slight bend in your elbow and make sure to not go above shoulder
+            height to minimize the risk of shoulder cuff injury.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend using a relatively light weight
+            and aiming to do <span id="tags">12-15</span> repetitions.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="SNGDOP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Seated Neutral Grip Dumbbell Overhead Press</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/LED1bhzkfLU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The seated neutral grip dumbbell overhead press is a great exercise
+            that targets the front deltoids. It is similar to the arnold press,
+            but there is no wrist movement.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend that you use moderate weight
+            where you are able to do 8-12 repetitions, with the last few
+            repetitions being particularly difficult. Do not sacrifice form for
+            weight, as you could increase risk for injury.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td class="bg-success">Muscle Growth</td>
+              <td class="bg-success">8-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="RDR-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Rear Delt Row</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/t-llLcNvsro"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The rear delt row is a great alternative to the face pulls if you do
+            not have cables accessible to you. You can perform this movement
+            with either a barbell or dumbbell, but we prefer dumbbells. Focus on
+            time under tension to ensure that your rear delts are being trained.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            We recommend that you use a relatively light weight in order to
+            obtain optimal form. It can be easy to cheat the exercise by using
+            momentum, which will decrease the amount of work the rear delt has
+            to do.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="RDF-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Rear Delt Fly</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/EA7u4Q_8HQ0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The rear delt fly is a great exercise that many people do as an
+            alternative to cable rear delt exercises. Use light weight and make
+            sure that you are not sacrificing form and using momentum to bring
+            up the dumbbells.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            The rear delt fly is a difficult movement that some people are
+            unable to perfect. Be sure to review the video to see how to do the
+            exercise correctly. We recommend that you use lighter weight to
+            minimize injury risk.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="SALR-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Single Arm Lateral Raise</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/FGU9j1P5L-w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The single arm lateral raise is a cable exercise that mimics the
+            lateral raise performed by a dumbbell. Using a cable is great if you
+            want to work on time under tension and mine muscle connection, as it
+            forces the lateral deltoid to be activated throughout the movement.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to focus on hypertrophy and working the
+            muscles through volume. We recommend that you use moderate weight
+            where you are able to do 12-15 repetitions, with the last few
+            repetitions being particularly difficult. Do not sacrifice form for
+            weight, as you could increase risk for injury.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td class="bg-success">Muscle Growth</td>
+              <td class="bg-success">12-15</td>
+            </tr>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="FP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Face Pulls</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/V8dZ3pyiCBo"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The face pull is a great exercise that targets the rear deltoid. It
+            is the most popular rear delt exercise, and a ton of people use it
+            to develop the muscle. Try to keep your wrists away from your head.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you should aim to do 12-15 repetitions of
+            moderate weight. Challenge yourself and make sure that you are
+            feeling the "squeeze" in your rear delt.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="CFR-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Cable Front Raise</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/oLvB9qgpteA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The cable front raise is a great exercise to hit the front deltoid.
+            This exercise is a great alternative if you do not have dumbbells
+            accessible to you. Using cables is a great way to practice time
+            under tension.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, we recommend that you do 12-15 repetitions with
+            relatively light volume.
+          </p>
+          <table>
+            <th>Intended Goal</th>
+            <th>Amount of Reps</th>
+            <tr>
+              <td class="bg-success">Muscle Growth</td>
+              <td class="bg-success">8-12</td>
+            </tr>
+            <td>Strength Training</td>
+            <td>3-5</td>
+          </table>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="CSP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Cable Shoulder Press</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PqZNN-v8vJk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The cable shoulder press is the cable version of the seated/standing
+            dumbbell press. This exercises targets the shoulders and is a great
+            way to get additional intensity on your deltoid muscles.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you want to use moderately heavy weight, but want
+            to get around 12-15 repetitions in. This seems odd, but use a
+            "heavy" weight where you struggle on your last few reps while not
+            compromising form.
+          </p>
+
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="LFP-modal" role="content">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+          <h2>Lying Face Pulls</h2>
+          <div>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/_Rl3-yzWxJI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p>
+            The lying face pull is a great variation of the face pull that
+            eliminates any use of momentum in the exercise. It really forces you
+            to hit your rear delt without recruiting any other muscle groups
+            primarily.
+          </p>
+          <p><b>- - -</b></p>
+          <p>
+            For this exercise, you should aim to do 12-15 repetitions of
+            moderate weight. Challenge yourself and make sure that you are
+            feeling the "squeeze" in your rear delt.
+          </p>
+          <p><b>- - -</b></p>
+        </div>
+      </div>
+    </div>
+    <p style="padding-left: 30px">👍 = corresponds to popularity of exercise</p>
+    <footer class="bg-success text-center">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Hello! I am constantly updating this web-app, and will continue to
+            make it better in the future. We hope the information on here serves
+            you well for now! 😊
+          </p>
+        </section>
+        <!-- Section: Text -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://workoutguru.com/">workoutguru.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
