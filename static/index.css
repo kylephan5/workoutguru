@@ -56,17 +56,6 @@ h3 {
 }
 
 /* dumbbell part */
-.benefits ul li::before {
-  content: "";
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-size: 40px;
-  background-image: url(' {{ STATIC_URL }} pics/intropics/dumbbellpic.png');
-  background-repeat: no-repeat;
-  margin-right: 5px;
-  margin-bottom: -12px;
-}
 
 .benefits ul li {
   font-size: 150%;

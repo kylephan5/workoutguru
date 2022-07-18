@@ -1,15 +1,25 @@
 {% extends 'main/base.html' %}
-
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
+<div class="top-intro">
+    <h1>GUR-ATE</h1>
+</div>
+<div class="gurate-intro">
+    <h4>Welcome to Gur-ate, an application that helps you set up your workout for the day.</h5>
+</div>
 <form action="" method="POST">
     {% csrf_token %}
-    <h5>How much time do you have to workout today?</h5>
-    {{form}}
+    <div style="padding: 50px 0px;">
+        <h5>How much time do you have to workout today?</h5>
+        {{form}}
+    </div>
+<h5>Check what muscle groups you would like to work out today.</h5>
 <table class="table table-striped table-hover table-bordered">
     <thead>
         <tr>
             <th scope="col">Muscle Groups</th>
+            <th scope="col">Check</th>
         </tr>
     </thead>
     <tbody>

@@ -1,25 +1,36 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-<table class="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">Exercise</th>
-        <th scope="col">Image</th>
-        <th scope="col">Sets/Reps</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for exercise in selected %}
+<div class="display">
+  <h2>Here is a summary of your workout:</h2>
+  <table class="table table-hover">
+      <thead>
         <tr>
-            <td>{{exercise.name}}</td>
-            <td><img src="{{exercise.image.url}}" alt="" style="max-height: 100px;"></td>
-            <td>{{exercise.reps}}</td>
+          <th scope="col"><b>Exercise</b></th>
+          <th scope="col"><b>Image</b></th>
+          <th scope="col"><b>Time (min.)</b></th>
+          <th scope="col"><b>Sets/Reps</b></th>
         </tr>
-        {% endfor %}
-    </tbody>
-  </table>
-<h3>Estimated total time for workout:</h3>
-<p>{{total_time}}</p>
+      </thead>
+      <tbody>
+          {% for exercise in selected %}
+          <tr>
+              <td>{{exercise.name}}</td>
+              <td><img src="{{exercise.image.url}}" alt="" style="max-height: 100px;"></td>
+              <td>{{exercise.time}}</td>
+              <td>{{exercise.reps}}</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+  <div class="final-notes">
+    <h5>Final Notes:</h5>
+      <ul>
+        <li>This workout should take you around {{total_time}} minutes.</li>
+        <li>The exercises that engage the bigger muscle groups (chest, back, legs) should be done first.</li>
+        <li>These exercises usually have lower rep ranges, and more sets.</li>
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
