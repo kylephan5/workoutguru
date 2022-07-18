@@ -101,6 +101,8 @@ def pick(response):
             elif response.POST.get('no'):
                 exercises.pop(0)
                 pass
+            elif response.POST.get('done'):
+                return redirect(reverse(display))
             args['exercise'] = exercises[0]
             # each iteration
             return render(response, "main/pick.html", args)
