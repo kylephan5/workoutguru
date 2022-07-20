@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,14 +87,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    {% load static %}
-    <script src="{% static 'base.js' %}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <script src="{% static 'base.js' %}"></script>
     <title>Gur-ate | Workout Guru</title>
 </head>
 <body style="font-weight: 525; font-family: Montserrat, sans-serif; color: green;">
@@ -115,7 +115,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="#" class="nav-link" style="padding-left: 15px;"> About </a>
+              <a href="/about/" class="nav-link" style="padding-left: 15px;"> About </a>
             </li>
             <li class="nav-item">
               <a href="/gurate/" class="nav-link" style="padding-left: 15px;"> Gur-ate </a>
@@ -155,5 +155,12 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
   ></script>
+  <script>
+    function confirmation() {
+    if (!confirm("Confirm submit?")) {
+        return false;
+    }
+    }
+  </script>
 </body>
 </html>

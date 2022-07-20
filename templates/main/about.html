@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'about.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>About: Workout Guru</title>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
+      <a
+        href="/"
+        class="navbar-brand mb-0 h1"
+        style="margin-left: 15px"
+        >Workout Guru</a
+      >
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="/about/" class="nav-link" style="padding-left: 15px;"> About </a>
+          </li>
+          <li class="nav-item">
+            <a href="/gurate/" class="nav-link" style="padding-left: 15px;"> Gur-ate </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              style="padding-left: 15px;"
+            >
+              Muscle Groups
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a href="/chest/" class="dropdown-item">Chest</a></li>
+              <li>
+                <a href="/shoulders/" class="dropdown-item">Shoulders</a>
+              </li>
+              <li><a href="/triceps/" class="dropdown-item">Triceps</a></li>
+              <li><a href="/back/" class="dropdown-item">Back</a></li>
+              <li><a href="/biceps/" class="dropdown-item">Biceps</a></li>
+              <li><a href="/legs/" class="dropdown-item">Legs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="top-intro">
+        <h1>ABOUT ME</h1>
+    </div>
+    <div class="info">
+        <div class="left-side">
+            <h5>Hi! My name is Kyle Phan and I am student at the University of Notre Dame studying computer science. I made Workout Guru for anyone who wants to dabble in weightlifting, and learn a little bit more about the various exercises that are commonly performed in the gym. I hope this webapp helps you in your weightlifting journey 😄. If you have any exercises you want to see on here or any recommendations in general, please contact me. In addition, I am also looking for internship opportunities; please contact me at <a href = "mailto: kphan2@nd.edu">kphan2@nd.edu</a> if you know of any opportunities!</h5>
+        </div>
+        <figure class="right-side">
+            <img src="{% static 'pics/intropics/linkedinphoto.jpeg' %}" alt="picture of gym">
+        </figure>
+    </div>
+    <div class="emoticons">
+        <a href="https://github.com/kylephan5" target="_blank"><i class="bi bi-github text-center" title="Github"></i></a>
+        <a href="https://www.linkedin.com/in/kyle-phan-17a452203/" target="_blank"><i class="bi bi-linkedin text-center" title="Linkedin"></i></a>
+        <a href="{% static 'Kyle Phan Resume 2022.pdf' %}" target="_blank"><i class="bi bi-filetype-pdf text-center" title="Resume"></i></i></a>
+
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <footer class="bg-success text-center">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Text -->
+            <section class="mb-4">
+            <p>
+                Hello! I am constantly updating this web-app, and will continue to
+                make it better in the future. We hope the information on here serves
+                you well for now! 😊
+            </p>
+            </section>
+            <!-- Section: Text -->
+        </div>
+        <!-- Grid container -->
+    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-dark" href="https://workoutguru.com/">workoutguru.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</body>

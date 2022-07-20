@@ -11,6 +11,7 @@ urlpatterns = [
     path('back/', views.back),
     path('biceps/', views.biceps),
     path('legs/', views.legs),
+    path('about/', views.about),
     path('gurate/', views.gurate),
     path('pick/', views.pick, name='pick'),
     path('display/', views.display),

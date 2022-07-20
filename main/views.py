@@ -7,7 +7,6 @@ from django.urls import reverse
 import random
 # Create your views here.
 
-
 def base(response):
     mg = MuscleGroups()
     return render(response, "main/index.html", {"musclegroups": mg})
@@ -36,6 +35,8 @@ def biceps(response):
 def legs(response):
     return render(response, "main/legs.html", {})
 
+def about(response):
+    return render(response, "main/about.html", {})
 
 def gurate(response):
     mg = MuscleGroups.objects.all()
