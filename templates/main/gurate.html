@@ -10,9 +10,13 @@
 </div>
 <form action="" method="POST" class="consult">
     {% csrf_token %}
+    <div style="padding-top: 25px;">
+        <h5>What is your email?</h5>
+        Email: {{form.email}}
+    </div>
     <div style="padding: 50px 0px;">
         <h5>How much time do you have to workout today?</h5>
-        {{form}}
+        Time: {{form.time}}
     </div>
 <h5>Check what muscle groups you would like to work out today.</h5>
 <table class="table table-striped table-hover table-bordered">
