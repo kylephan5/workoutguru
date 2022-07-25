@@ -4,8 +4,10 @@ from django.http import HttpResponse
 from .models import MuscleGroups, Exercises
 from .forms import Gurate
 from django.urls import reverse
+from django.contrib.auth import get_user_model, login
 import random
 # Create your views here.
+
 
 def base(response):
     mg = MuscleGroups()
@@ -35,48 +37,88 @@ def biceps(response):
 def legs(response):
     return render(response, "main/legs.html", {})
 
+
 def about(response):
     return render(response, "main/about.html", {})
 
+
 def gurate(response):
-    mg = MuscleGroups.objects.all()
+    mg = MuscleGroups.objects.filter(email__isnull=True)
     form = Gurate()
     args = {'mg': mg, 'form': form}
     if response.method == "POST":
         id_list = response.POST.getlist('boxes')
         # getting how much time the user can spend on working out
-        time = response.POST['time']
-        args['time'] = time
-        global global_time
+        # time = response.POST['time']
+        # args['time'] = time
+        # global global_time
 
-        def global_time():
-            return time
+        # def global_time():
+        # return time
         # Uncheck all events
         mg.update(complete=False)
         # Update the database
+        # Creating a user
+        User = get_user_model()
+        # logging in the user, if cant login then we create a new user and log them in
+
+        try:  # if user is in database, log the user in and update their time to be whatever they put in
+            login(response, User.objects.get(
+                email=response.POST['email']))
+            User.objects.update(
+                time=response.POST['time'], left=0, right=1, current=0)
+        except:  # if user is not in database, create the user and log them in
+            User.objects.create_user(
+                email=response.POST['email'], time=response.POST['time'], left=0, right=1, current=0)
+            login(response, User.objects.get(
+                email=response.POST['email'], time=response.POST['time'], left=0, right=1, current=0))
+
+        # for mg in MuscleGroups.objects.all():  # if muscle group duplicate exists for said user already, then delete it
+            # if mg.email == response.user.email:
+            # MuscleGroups.objects.get(
+            # name=mg, email=response.user.email).delete()
+
+        Exercises.objects.filter(email=response.user).delete()
+        print(Exercises.objects.all())
         for group in id_list:
-            MuscleGroups.objects.filter(name=group).update(complete=True)
+            copy = MuscleGroups.objects.get(  # copy will hold the muscle group
+                name=group, email__isnull=True)
 
-        filtered = MuscleGroups.objects.filter(complete=True)
-        # whatever muscle group user wants
-        args['filtered'] = filtered
+            # if there is a pre-existing exercise with email attached, make selected false
+            copy.exercises_set.filter(
+                email=response.user, selected=True).delete()
+            copy.exercises_set.filter(
+                email=response.user, selected=False).delete()
 
-        # create argument key,val pair that has exercises
-        exercises = []
-        for group in filtered:
-            name = group.name
-            for exercise in group.exercises_set.all():
-                exercises.append(exercise)
+            for exercise in copy.exercises_set.all():  # getting the normal exercises, with no email attached
+
+                copy.exercises_set.get_or_create(  # creating/getting the new updated exercises, with an email attached
+                    email=response.user, name=exercise, musclegroup=exercise.musclegroup, time=exercise.time, image=exercise.image, reps=exercise.reps, selected=False)
+                copy.save()
+
+        # creating a query set unique to user
+        # user_musclegroup_queryset = MuscleGroups.objects.filter(
+            # email=response.user)
+
+        # exercises = []
+        # for group in user_musclegroup_queryset:  # for every muscle group selected
+            # print(group.exercises_set.all())
+            # for exercise in group.exercises_set.all():  # for every exercise in the muscle group selected
+            # make a copy of that exercise, give that copy an email = to the email of muscle group
+            # print(exercise)
+            # copy = group.exercise_set.get(name=exercise)
+            # print(copy)
+            # exercises.append(exercise)
 
         # randomized order of exercise display
-        random.shuffle(exercises)
+
+        # random.shuffle(exercises)
         # initialize selected list every time
-        args['selected'] = []
 
         global global_exercises, global_args
 
-        def global_exercises():  # globalize both variables
-            return exercises
+        # def global_exercises():  # globalize both variables
+        # return exercises
 
         def global_args():
             return args
@@ -87,47 +129,59 @@ def gurate(response):
 
 
 def pick(response):
-    exercises = global_exercises()  # exercises to choose from
-    args = global_args()
-    args['exercise'] = exercises[0]  # initialize argument
-    # going through each exercise in the loop, seeing what user wants
-    while len(exercises)-1 != 0 and int(args['time']) > 0:
+    # exercises = global_exercises()  # exercises to choose from
+    args = []
+    # 2 pointer iterate through query set
+    User = get_user_model()
+    User.objects.filter(email=response.user).update(
+        right=len(Exercises.objects.filter(email=response.user))-1)
+    while response.user.current < response.user.right:
         if response.method == 'POST':
             if response.POST.get('yes'):
-                args['time'] = int(args['time']) - exercises[0].time
-                args['selected'].append(exercises.pop(0))
-                if int(args['time']) <= 0:
+                response.user.time = response.user.time - Exercises.objects.filter(email=response.user)[
+                    response.user.current].time
+                User.objects.filter(email=response.user).update(
+                    time=response.user.time)
+                # updating selected to be True
+                Exercises.objects.filter(
+                    name=Exercises.objects.filter(email=response.user)[response.user.current].name, email=response.user).update(selected=True)
+                if response.user.time <= 0:
                     return redirect(reverse(display))
                 pass
             elif response.POST.get('no'):
-                exercises.pop(0)
                 pass
             elif response.POST.get('done'):
                 return redirect(reverse(display))
-            args['exercise'] = exercises[0]
-            # each iteration
+            # Exercises.objects.filter(email=response.user).first().delete()
+            # print(response.user.right)
+            # print(response.user.right)
+            response.user.current += 1
+            User.objects.filter(email=response.user).update(
+                current=response.user.current)
+            args = {'exercise': Exercises.objects.filter(
+                email=response.user)[response.user.current], 'time': response.user.time}
             return render(response, "main/pick.html", args)
-        else:  # before anything is selected
+        else:
+            args = {'exercise': Exercises.objects.filter(email=response.user)[
+                response.user.current], 'time': response.user.time}
             return render(response, "main/pick.html", args)
 
-    if len(exercises)-1 == 0:
-        args['exercise'] = exercises[0]
+    if response.user.current == response.user.right:
         if response.method == 'POST':
             if response.POST.get('yes'):
-                args['selected'].append(exercises.pop(0))
+                response.user.time = response.user.time - Exercises.objects.filter(email=response.user)[
+                    response.user.current].time
+                # updating selected to be True
+                Exercises.objects.filter(
+                    name=Exercises.objects.filter(email=response.user)[response.user.current].name, email=response.user).update(selected=True)
                 pass
             elif response.POST.get('no'):
-                exercises.pop(0)
                 pass
-            return redirect(reverse(display))
+        return redirect(reverse(display))
+        # args['exercise'] = exercises[0]  # initialize argument
+        # going through each exercise in the loop, seeing what user wants
 
 
 def display(response):
-    args = global_args()
-
-    total_time = 0
-    for exercise in args['selected']:
-        total_time += exercise.time
-
-    args['total_time'] = total_time
-    return render(response, 'main/display.html', args)
+    print(Exercises.objects.filter(email=response.user, selected=True))
+    return render(response, 'main/display.html', {'selected': Exercises.objects.filter(email=response.user, selected=True)})
