@@ -47,6 +47,10 @@
           padding-right: max(25px, 10%);
         }
 
+        .sendemail {
+          padding: 0px;
+        }
+
         .consult {
           padding-bottom: 50px;
         }
@@ -163,6 +167,10 @@
     if (!confirm("Confirm submit?")) {
         return false;
     }
+    }
+
+    function send() {
+      alert('Email has been sent. Please check your junk folder too!')
     }
   </script>
   <footer class="bg-success text-center">

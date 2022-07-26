@@ -28,7 +28,21 @@
       <ul>
         <li>The exercises that engage the bigger muscle groups (chest, back, legs) should be done first.</li>
         <li>These exercises usually have lower rep ranges, and more sets.</li>
+        <li>A little bit about how the sets/reps works:
+            <ul>
+              <li>The x separates the sets from the reps (the sets is the first number, reps is second)</li>
+              <li>If there are multiple numbers (ex. 3-4x10-12), that means you can pick to do 3 sets of 10/12 reps or 4 sets of 10/12 reps.</li>
+              <li>If the increment is 8-12, you can either do 8, 10, 12 (keep the reps even and in increments of 2).</li>
+          </ul>
+        </li>
     </ul>
+  </div>
+  <div>
+    <h5>Want a copy of this workout sent to your email?</h5>
+    <form action="" method="POST" class="sendemail">
+    {% csrf_token %}
+    <button type="submit", name="email", value="email", class="btn btn-warning" onclick="send()">Send Email</button>
+    </form>
   </div>
 </div>
 

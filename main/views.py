@@ -1,3 +1,6 @@
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
+from django.conf import settings
 from logging.config import valid_ident
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -79,7 +82,6 @@ def gurate(response):
             # name=mg, email=response.user.email).delete()
 
         Exercises.objects.filter(email=response.user).delete()
-        print(Exercises.objects.all())
         for group in id_list:
             copy = MuscleGroups.objects.get(  # copy will hold the muscle group
                 name=group, email__isnull=True)
@@ -95,33 +97,6 @@ def gurate(response):
                 copy.exercises_set.get_or_create(  # creating/getting the new updated exercises, with an email attached
                     email=response.user, name=exercise, musclegroup=exercise.musclegroup, time=exercise.time, image=exercise.image, reps=exercise.reps, selected=False)
                 copy.save()
-
-        # creating a query set unique to user
-        # user_musclegroup_queryset = MuscleGroups.objects.filter(
-            # email=response.user)
-
-        # exercises = []
-        # for group in user_musclegroup_queryset:  # for every muscle group selected
-            # print(group.exercises_set.all())
-            # for exercise in group.exercises_set.all():  # for every exercise in the muscle group selected
-            # make a copy of that exercise, give that copy an email = to the email of muscle group
-            # print(exercise)
-            # copy = group.exercise_set.get(name=exercise)
-            # print(copy)
-            # exercises.append(exercise)
-
-        # randomized order of exercise display
-
-        # random.shuffle(exercises)
-        # initialize selected list every time
-
-        global global_exercises, global_args
-
-        # def global_exercises():  # globalize both variables
-        # return exercises
-
-        def global_args():
-            return args
         return redirect(reverse(pick))
 
     else:  # if not a post request
@@ -160,10 +135,20 @@ def pick(response):
                 current=response.user.current)
             args = {'exercise': Exercises.objects.filter(
                 email=response.user)[response.user.current], 'time': response.user.time}
+            if response.user.current < response.user.right:
+                args['nextexercise'] = Exercises.objects.filter(
+                    email=response.user)[response.user.current+1]
+                args['exercisesleft'] = response.user.right - \
+                    response.user.current
+            else:
+                args['nextexercise'] = 'None'
+                args['exercisesleft'] = 0
+
             return render(response, "main/pick.html", args)
         else:
             args = {'exercise': Exercises.objects.filter(email=response.user)[
-                response.user.current], 'time': response.user.time}
+                response.user.current], 'time': response.user.time, 'nextexercise': Exercises.objects.filter(
+                    email=response.user)[response.user.current+1], 'exercisesleft': len(Exercises.objects.filter(email=response.user))-1}
             return render(response, "main/pick.html", args)
 
     if response.user.current == response.user.right:
@@ -183,5 +168,18 @@ def pick(response):
 
 
 def display(response):
-    print(Exercises.objects.filter(email=response.user, selected=True))
+    if response.method == 'POST':
+        if response.POST.get('email'):
+            args = {}
+            template = render_to_string('main/email.html', args)
+            email = EmailMessage(
+                'Your Workout Summary - Workout Guru',
+                template,
+                settings.EMAIL_HOST_USER,
+                [response.user],
+            )
+            email.fail_silently = False
+            email.send()
+
+            return render(response, 'main/display.html', {'selected': Exercises.objects.filter(email=response.user, selected=True)})
     return render(response, 'main/display.html', {'selected': Exercises.objects.filter(email=response.user, selected=True)})

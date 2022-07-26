@@ -59,6 +59,16 @@ margin: 0 auto;
 .emoticons i {
     transform: scale(2)
 }
+
+.bottom {
+    background: #f5f5f5;
+    padding: 25px 0px;
+}
+
+.bottom p {
+    text-align: center;
+}
+
 @media (max-width: 900px) {
     h5 {
         font-size: 100%;
