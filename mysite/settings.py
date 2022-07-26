@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)sck^^hs7ejh2gjn#&kt4t*upnhjpuf03u0bd*xs!^+wafb(tb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['workout-guru.herokuapp.com/']
 
 
 # Application definition
@@ -132,6 +132,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static/']
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
@@ -144,6 +145,7 @@ EMAIL_HOST_PASSWORD = "ibwnimbtvlitttdy"
 
 
 django_heroku.settings(locals())
+
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Default primary key field type
