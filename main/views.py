@@ -170,7 +170,7 @@ def pick(response):
 def display(response):
     if response.method == 'POST':
         if response.POST.get('email'):
-            args = {}
+            args = {'name': response.user, 'selected': Exercises.objects.filter(email=response.user, selected=True)}
             template = render_to_string('main/email.html', args)
             email = EmailMessage(
                 'Your Workout Summary - Workout Guru',

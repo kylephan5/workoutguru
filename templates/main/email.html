@@ -1,1 +1,13 @@
-Sup bitch
+Hello {{name}},
+
+Thank you for using Workout Guru today. We hope you didn't run into any problems! Here is a summary of your workout below:
+
+Exercise | Time | Set/Reps 
+{% for exercise in selected %}
+{{exercise.name}} | {{exercise.time}} | {{exercise.reps}}
+{% endfor %}
+
+Have a great workout!
+
+Sincerely,
+The Workout Guru Team
