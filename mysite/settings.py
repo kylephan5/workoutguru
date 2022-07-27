@@ -144,11 +144,11 @@ EMAIL_HOST_USER = "workoutguru.email@gmail.com"
 EMAIL_HOST_PASSWORD = "ibwnimbtvlitttdy"
 
 
-django_heroku.settings(locals())
-
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+django_heroku.settings(locals())
