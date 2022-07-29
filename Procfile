@@ -1,1 +1,1 @@
-web:gunicorn --pythonpath workoutguru mysite.wsgi
+web: gunicorn mysite.wsgi --log-file -
