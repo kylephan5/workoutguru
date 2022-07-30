@@ -32,7 +32,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['workout-guru.herokuapp.com/']
 
@@ -151,6 +151,7 @@ django_heroku.settings(locals())
 
 AWS_STORAGE_BUCKET_NAME = 'workoutguru'
 AWS_S3_REGION_NAME = 'us-west-1'  # e.g. us-east-2
+AWS_S3_SIGNATURE_VERSION = 's3v4'
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
 
