@@ -1,1 +1,1 @@
-web: gunicorn workoutguru.wsgi:app --preload --log-file=- --log-level debug
+web: gunicorn workoutguru.wsgi:application --preload --log-file=- --log-level debug
