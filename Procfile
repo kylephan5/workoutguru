@@ -1,1 +1,1 @@
-web: gunicorn workoutguru.wsgi
+web: gunicorn workoutguru:app
