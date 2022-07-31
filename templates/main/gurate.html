@@ -6,8 +6,26 @@
     <h1>GUR-ATE</h1>
 </div>
 <div class="gurate-intro">
-    <h4>Welcome to Gur-ate, an application that helps you set up your workout for the day.</h5>
+    <h4>Welcome to Gur-ate, an application that helps you set up your workout for the day.</h4>
+        <a
+        href=""
+        data-bs-toggle="modal"
+        data-bs-target="#instructions"
+      >Click here for instructions</a>
 </div>
+<!--<div class="info">
+    <h4>
+        Instructions
+    </h4>
+    <ul>
+        <li>Enter your email so that you can receive a copy of your workout at the end.</li>
+        <li>Enter how much time (in minutes) you have to work out today.</li>
+        <li>Select what muscle groups you want to target.</li>
+        <li>On the next page, you will be prompted with an exercise. Click the green check button if you want to add it to your workout. Click the red check button if you don't want to add it to your workout.</li>
+        <li>Happy Exercising!</li>
+    </ul>
+</div>
+-->
 <form action="" method="POST" class="consult">
     {% csrf_token %}
     <div style="padding-top: 25px;">
@@ -15,7 +33,7 @@
         Email: {{form.email}}
     </div>
     <div style="padding: 50px 0px;">
-        <h5>How much time do you have to workout today?</h5>
+        <h5>How much time (in minutes) do you have to workout today?</h5>
         Time: {{form.time}}
     </div>
 <h5>Check what muscle groups you would like to work out today.</h5>
@@ -41,6 +59,19 @@
 </table>
 <button class="btn btn-success" type="submit">Submit</button>
 </form>
-<div>
-</div>
+<div class="modal" id="instructions" role="content">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button class="close-modal" data-bs-dismiss="modal">&times;</button>
+        <h2>Instructions</h2>
+        <ul>
+            <li>Enter your email so that you can receive a copy of your workout at the end.</li>
+            <li>Enter how much time (in minutes) you have to work out today.</li>
+            <li>Select what muscle groups you want to target.</li>
+            <li>On the next page, you will be prompted with an exercise. Click the green check button if you want to add it to your workout. Click the red check button if you don't want to add it to your workout.</li>
+            <li>Happy Exercising!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 {% endblock %}
