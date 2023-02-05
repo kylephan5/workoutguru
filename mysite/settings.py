@@ -34,7 +34,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['workout-guru.herokuapp.com']
+ALLOWED_HOSTS = ['https://workoutguru-abvt.vercel.app/']
 
 
 # Application definition
